@@ -1,0 +1,44 @@
+angularjs
+干什么 
+简化 重复性 劳动
+获取节点  添加事件 创建
+
+接管UI
+
+好在哪儿 
+
+自动同步
+
+有限制
+
+
+----------
+
+angularjs 是 MVC 框架 
+一切都是数据
+
+angularjs 基本三要素
+
+ng-app angular 管理的范围
+ng-model 数据源
+ng-bind  数据用到那里
+
+
+angularjs 与 原生 js 交互 $scope  桥梁
+
+避免全局污染
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

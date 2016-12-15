@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>angularjs controller</title>
+	<script src="angular/angular.js" charset="utf-8"></script>
+	<script src="ajax.js"></script>
+	<script>
+		var mod = angular.module('main_mod',[]);
+		// ng-app 模块接管的范围
+		//往模块里添加东西
+
+		mod.controller('control1',function($scope){
+			//所有的和control1 相关的代码
+
+			//$scope 所有的angular的数据都在scope上
+
+			$scope.a = 1222;
+			$scope.parseInt= function(n){
+
+				return parseInt(n);
+			};
+
+			$scope.alert= function(message){
+
+				window.alert(message);
+			}
+
+		})
+
+
+	</script>
+
+</head>
+<body>
+
+ 	<div ng-app="main_mod" ng-init="arr=[12,5,8,9,33,75];showValue=true;arr2=[{name:'blue',age:18},{name:'red',age:22}]" ng-controller="control1">
+ 		<input type="text" name="name" value=""  ng-model="a">
+	    <input type="text" name="name" value=""  ng-model="b=44">
+	    <input type="button" name="button" value="按钮" ng-click="a=12;showValue=!showValue">
+		<div class="" >
+		结果是:{{a + b}}
+		</div>
+		<div>
+			angularjs controller 第一个作用是 桥梁 angularjs 与 原生 $scope;  $scope 
+		</div>
+		<div style="width: 200px; height: 200px;background:#CCC;" ng-show="showValue">
+			
+		</div>
+		<input type="text" name="name" value=""  ng-model="num">
+		  <input type="button" name="button" value="添加" ng-click="arr.push(num)">
+		<ul>
+			<li ng-repeat="item in arr">{{item}}</li>
+		</ul>
+			<ul>
+			<li ng-repeat="item2 in arr2">姓名:{{item2.name}},年龄:{{item2.age}}</li>
+		</ul>
+
+
+ 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</body>
+</html>
